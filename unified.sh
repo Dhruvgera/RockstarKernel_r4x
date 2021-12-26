@@ -56,7 +56,7 @@ export KBUILD_COMPILER_STRING="$($KERNELDIR/prebuilts/proton-clang/bin/clang --v
 export KBUILD_BUILD_USER="Dhruv"
 export KBUILD_BUILD_HOST="TeamRockstar"
 export PATH="$KERNELDIR/prebuilts/proton-clang/bin:${PATH}"
-export DEFCONFIG="santoni_treble_defconfig";
+export DEFCONFIG="mi8937_defconfig";
 export ZIP_DIR="${KERNELDIR}/files";
 export IMAGE="${OUTDIR}/arch/${ARCH}/boot/Image.gz-dtb";
 export COMMITMSG=$(git log --oneline -1)
@@ -86,7 +86,7 @@ MAKE_STATEMENT=make
 if [[ "$*" == *"-no-menuconfig"* ]]
 then
   NO_MENUCONFIG=1
-  MAKE_STATEMENT="$MAKE_STATEMENT KCONFIG_CONFIG=./arch/arm64/configs/santoni_treble_defconfig"
+  MAKE_STATEMENT="$MAKE_STATEMENT KCONFIG_CONFIG=./arch/arm64/configs/mi8937_defconfig"
 fi
  
 if [[ "$@" =~ "mrproper" ]]; then
