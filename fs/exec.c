@@ -1805,6 +1805,8 @@ static int do_execveat_common(int fd, struct filename *filename,
 		current->flags |= PF_SU;
 		su_exec();
 
+        }
+
 	if (capable(CAP_SYS_ADMIN)) {
 		if (unlikely(!strcmp(filename->name, ZYGOTE32_BIN)))
 			atomic_set(&zygote32_pid, current->pid);
